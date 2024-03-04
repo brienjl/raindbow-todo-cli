@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "To Do App in the CLI. Styled in rainbow and colors!",
   "main": "index.js",
+  "type": "module",
   "bin": {
     "note": "./index.js"
   },
@@ -14,5 +15,8 @@
     "cli"
   ],
   "author": "jeremy brien",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "yargs": "^17.7.2"
+  }
 }
