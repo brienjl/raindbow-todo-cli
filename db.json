@@ -1,3 +1,16 @@
 {
-  "notes": []
+  "notes": [
+    {
+      "tags": [
+        "cats"
+      ],
+      "id": 1710646011571,
+      "content": "boop oscar on the notes"
+    },
+    {
+      "tags": [],
+      "id": 1710646108883,
+      "content": "some other note"
+    }
+  ]
 }

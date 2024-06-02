@@ -18,11 +18,19 @@ export const getAllNotes = async () => {
     return notes
 }
 
-//find a note by it's contents
+// Find a note by its contents with a minimum of three letters
 export const findNotes = async (filter) => {
-    const { notes } = await getDB()
-    return notes.filter(note => note.content.toLowerCase().
-    includes(filter.toLowerCase()))
+    if (filter.length < 3) {
+        return "The filter length should be greater than 3.";
+    }
+
+    const { notes } = await getDB();
+    const filteredNotes = notes.filter(note => {
+        const content = note.content.toLowerCase();
+        const filterLowerCase = filter.toLowerCase();
+        return content.includes(filterLowerCase);
+    });
+    return filteredNotes;
 }
 
 //remove a note
